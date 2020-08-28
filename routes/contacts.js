@@ -1,12 +1,28 @@
 const express = require('express')
 const router = express.Router();
+const auth = require('../middleware/auth')
+const {check, validationResult} = require('express-validator/check');
+const User = require('../models/User');
+const Contact = require('../models/Contact');
 
 // @route   Get api/contacts
 // desc    Get all users contact
 // access  Privqte
-router.get('/', (req,res) => {
-    res.send('Get all contact')
-})
+router.get('/',auth, async (req,res) => {
+  try {
+      const contacts = await Contact.find({user: req.user.id}).sort({
+          date: -1
+      });
+
+      res.json(contacts);
+
+  } catch (error) {
+      console.error(error);
+      res.status(500).send('Server Error');
+
+
+  }
+});
 
 // @route   POST api/contacts
 // desc    Add new contacts
