@@ -32,7 +32,7 @@ const contactContext = useContext(ContactContext)
       e.preventDefault()
 
       if(current === null) {
-        contactContext.addContact(contact);
+        addContact(contact);
       } else {
         updateContact(contact);
       }
