@@ -3,7 +3,6 @@ import Contacts from '../contacts/Contacts'
 import ContactForm from '../contacts/ContactForm'
 import ContactFilter from '../contacts/ContactFilter';
 const Home = () => {
-    console.log('home');
     return (
         <div className="grid-2">
             <div>
