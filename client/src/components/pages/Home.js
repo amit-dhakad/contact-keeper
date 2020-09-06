@@ -7,7 +7,6 @@ import { useContext } from 'react';
 import { useEffect } from 'react';
 const Home = () => {
     const authContext = useContext(Authcontext);
-
     useEffect(() => {
      authContext.loadUser();
 
