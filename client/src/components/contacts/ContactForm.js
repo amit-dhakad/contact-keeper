@@ -36,12 +36,7 @@ const contactContext = useContext(ContactContext)
       } else {
         updateContact(contact);
       }
-      setContact({
-        name:'',
-        email:'',
-        phone:'',
-        type:'personal'
-      })
+        clearAll();
   }
 
 
