@@ -1,5 +1,5 @@
 # contact-keeper
-This is react an node app, Keep your contacts safe.
+This is react and node app, Keep your contacts safe.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
